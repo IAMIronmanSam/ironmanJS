@@ -3,11 +3,14 @@
 			margin: 0; 
 		}
 
+		.testWrapper{position: absolute;}
+
 		.header{
 			width: 420px;
 			height: 657px;
 			margin: 30px auto;
 			position: relative;
+			float: right;
 		}
 
 		/**********************************************

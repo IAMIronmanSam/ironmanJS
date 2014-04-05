@@ -13,6 +13,10 @@ util.TypeOf = function(_param) {
         return isType;
     case 'string':
         return isType;
+    case 'object':
+        return _param.constructor.name;
+    case 'undefined':
+        return isType;
     default:
         util.float(_param);
         break;

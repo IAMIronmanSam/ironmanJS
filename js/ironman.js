@@ -6,26 +6,29 @@
 
 // The purpose of this JS is for Learn and share the best practices of Object Manipulation in Javascript //
 var util = {};
-util.TypeOf = function(_param) {
+
+util.isTypeOf = function(_param) {
+    try{
     var isType = typeof _param;
-    switch(isType){
-    case 'number':
-        return isType;
-    case 'string':
-        return isType;
-    case 'object':
-        return _param.constructor.name;
-    case 'undefined':
-        return isType;
-    default:
-        util.float(_param);
-        break;
+        switch(isType){
+        case 'number':
+            return isType;
+        case 'string':
+            return isType;
+        case 'object':
+            return _param.constructor.name;
+        case 'undefined':
+            return isType;
+        default:
+          throw "Execption";
+            break;
+        }
+    }
+    catch(exe){
+        return 'Execption';
     }
 };
 
-util.float = function(_param){
-    if(_param%1)
-    {
-        return "float";
-    }
+util.objManipulation = function (_obj){
+
 };

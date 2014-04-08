@@ -1,22 +1,27 @@
 var isArray = [1,2,3,4,5];
 var isNull;
+var isDate = new Date(06/04/2014);
 
-test( "Typeof Number", function() {
-    ok( util.TypeOf(4) == "number", "Passed!" );
+test( "isTypeOf Number", function() {
+    ok( util.isTypeOf(4) == "number", "Passed!" );
 });
 
-test( "Typeof String", function() {
-  ok( util.TypeOf('4') == "string", "Passed!" );
+test( "isTypeOf String", function() {
+  ok( util.isTypeOf('4') == "string", "Passed!" );
 });
 
-test( "Typeof Array", function() {
-  ok( util.TypeOf(isArray) == "Array", "Passed!" );
+test( "isTypeOf Array", function() {
+  ok( util.isTypeOf(isArray) == "Array", "Passed!" );
 });
 
-test( "Typeof undefined/Null", function() {
-  ok( util.TypeOf() == "undefined", "Passed!" );
+test( "isTypeOf undefined/Null", function() {
+  ok( util.isTypeOf() == "undefined", "Passed!" );
 });
 
-test( "Typeof float", function() {
-  ok( util.float(0.1) == "float", "Passed!" );
+test( "isTypeOf Date", function() {
+  ok( util.isTypeOf(isDate) == "Date", "Passed!" );
+});
+
+test( "Execption Handling", function() {
+  ok( util.isTypeOf($) == "Execption", "Passed!" );
 });

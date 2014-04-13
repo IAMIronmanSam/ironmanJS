@@ -1,15 +1,15 @@
 // ┌────────────────────────────────────────────────────────────┐ \\
-// │ 			IronManJS - Javascript Object Manipulation 		│ \\
+// │             IronManJS - Javascript Object Manipulation     │\\
 // ├────────────────────────────────────────────────────────────┤ \\
-// │ Author Arivazhagan (http://arivazhagan.github.io/) 		│ \\
+// │ Author Arivazhagan (http://arivazhagan.github.io/)         │ \\
 // └────────────────────────────────────────────────────────────
 
 // The purpose of this JS is for Learn and share the best practices of Object Manipulation in Javascript //
 var util = {};
 
-util.isTypeOf = function(_param) {
-    try{
-    var isType = typeof _param;
+function isTypeOf (_param) {
+    try {
+        var isType = typeof _param;
         switch(isType){
         case 'number':
             return isType;
@@ -20,15 +20,14 @@ util.isTypeOf = function(_param) {
         case 'undefined':
             return isType;
         default:
-          throw "Execption";
-            break;
+            throw "Execption";
         }
     }
     catch(exe){
         return 'Execption';
     }
-};
+}
 
-util.objManipulation = function (_obj){
+util.objManipulation = function (){
 
 };

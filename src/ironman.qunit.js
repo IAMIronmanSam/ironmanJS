@@ -3,6 +3,8 @@
 // brackets-xunit: qunit
 // brackets-xunit: includes=ironman.js
 /*global test, ok, equal, isTypeOf */
+
+module ('Check object Type');
 test("isTypeOf Number", function () {
     "use strict";
     var _param = 4;
@@ -27,6 +29,10 @@ test( "isTypeOf undefined/Null", function() {
 
 test( "isTypeOf Date", function() {
     var isDate = new Date(06/04/2014);
-    ok( isTypeOf(isDate) == "Date", "Passed!" );
+    equal(isTypeOf(isDate), "Date", "isTypeOf() equals Date");
 });
 
+module ('Check element exist');
+test( "isElement Exist", function() {
+    equal(getElement ('#qunit-banner','all'), "element not exist", "Element Exist");
+});

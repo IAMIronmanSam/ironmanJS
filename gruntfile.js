@@ -11,13 +11,16 @@ module.exports = function(grunt) {
         src: 'src/ironman.js',
         dest: 'build/ironman.min.js'
       }
-    }
+    },
+    qunit: {
+    all: ['src/ironman.qunit/qunit.html']
+  }
   });
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
-
+  grunt.loadNpmTasks('grunt-contrib-qunit');
   // Default task(s).
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['uglify','qunit']);
 
 };
